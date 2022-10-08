@@ -1,0 +1,152 @@
+:root {
+	--dark-blue: #171723;
+	--white: #E1DFEA;
+	--active-blue: #5284FF;
+}
+
+* {
+	margin: 0;
+}
+
+body {
+	font-family: 'open sans', serif;
+	font-size: 18px;
+	background-color: var(--dark-blue);
+	color: var(--white);
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+}
+
+#app {
+	display: flex;
+	flex-direction: column;
+	gap: 16px;
+	width: 1100px;
+	max-width: calc(100% - 32px);
+}
+
+h1 {
+	font-size: 100px;
+	font-weight: 800;
+}
+
+.rows {
+	display: flex;
+	flex-direction: column;
+	gap: 8px;
+}
+
+.row {
+	display: flex;
+	gap: 16px;
+}
+
+.row.header {
+	font-weight: bold;
+	font-size: 24px;
+	height: 38px;
+	border-bottom: 2px solid var(--white);
+}
+
+input {
+	font-size: 18px;
+	color: var(--dark-blue);
+	box-sizing: border-box;
+	height: 32px;
+	padding: 5px;
+	background-color: var(--white);
+	border: 2px solid #2A477F;
+	border-radius: 5px;
+}
+
+input:focus, .type>div:focus, .remove:focus, .new:focus {
+	border-color: var(--active-blue);
+	outline: 2px solid var(--active-blue);
+}
+
+input[type="radio"] {
+	display: none;
+}
+
+.date {
+	flex: 0 0 160px;
+}
+
+.description {
+	flex: 1 1 auto;
+	width: 200px;
+}
+
+.headerType {
+	flex: 0 0 80px;
+}
+
+.type {
+	background-color: #757575;
+	color: var(--dark-blue);
+	border-radius: 5px;
+	flex: 0 0 80px;
+	display: flex;
+	cursor: pointer;
+}
+
+.type>div {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	transition: background-color .2s, color .2s;
+}
+
+.type>.in {
+	width: 40%;
+	border-radius: 5px 0 0 5px;
+}
+
+.type>.out {
+	width: 60%;
+	border-radius: 0 5px 5px 0;
+}
+
+.type>.selected {
+	background-color: var(--active-blue);
+	color: var(--white);
+}
+
+.amount {
+	flex: 0 0 100px;
+	width: 100px;
+	text-align: right;
+}
+
+.headerRemove {
+	flex: 0 0 32px;
+}
+
+.remove {
+	flex: 0 0 32px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	background-color: var(--white);
+	border-radius: 5px;
+	cursor: pointer;
+}
+
+.remove>img {
+	width: 18px;
+	height: 18px;
+}
+
+.new {
+	background-color: var(--white);
+	color: var(--dark-blue);
+	padding: 5px;
+	border-radius: 5px;
+	text-align: center;
+	cursor: pointer;
+}
+
+.total {
+	align-self: flex-end;
+}
