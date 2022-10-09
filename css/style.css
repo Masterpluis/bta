@@ -60,7 +60,7 @@ input {
 	border-radius: 5px;
 }
 
-input:focus, .type>div:focus, .remove:focus, .new:focus {
+input:focus, .type>div:focus, .removeBtn:focus, .new:focus {
 	border-color: var(--active-blue);
 	outline: 2px solid var(--active-blue);
 }
@@ -123,7 +123,7 @@ input[type="radio"] {
 	flex: 0 0 32px;
 }
 
-.remove {
+.removeBtn {
 	flex: 0 0 32px;
 	display: flex;
 	justify-content: center;
@@ -133,7 +133,7 @@ input[type="radio"] {
 	cursor: pointer;
 }
 
-.remove>img {
+.removeImg {
 	width: 18px;
 	height: 18px;
 }

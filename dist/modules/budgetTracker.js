@@ -90,8 +90,8 @@ class Row {
         const amount = Elements.inputElement(this.root, "number", rowData.amount.toString(), "amount");
         amount.placeholder = "0";
         amount.addEventListener("change", e => this.updateAmount(amount.value));
-        const rmBtn = Elements.divElement(this.root, "remove");
-        Elements.imageElement(rmBtn, "../../media/remove.svg", "", "x", "Remove");
+        const rmBtn = Elements.divElement(this.root, "removeBtn");
+        Elements.imageElement(rmBtn, "media/remove.svg", "removeImg", "x", "Remove");
         rmBtn.tabIndex = 0;
         rmBtn.addEventListener("click", e => this.removeRow());
     }
