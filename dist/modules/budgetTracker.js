@@ -51,10 +51,13 @@ export default class BudgetTracker {
         let total = 0;
         this.rows.forEach(row => {
             const amount = parseFloat(row.rowData.amount);
+            console.log(total);
+            console.log(amount);
+            console.log(row.rowData.type === 0 ? total + amount : total - amount);
             if (!isNaN(amount))
                 row.rowData.type === 0 ? total += amount : total -= amount;
         });
-        this.total.textContent = total.toString();
+        this.total.textContent = (Math.round(total * 100) / 100).toFixed(2);
     }
     removeRow(rmRow) {
         this.rows.forEach((row, i) => {
