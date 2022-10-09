@@ -7,7 +7,7 @@ export function divElement(parent, css = "", innerHtml = "") {
     parent.appendChild(div);
     return div;
 }
-export function inputElement(parent, type = "", value, css = "", placeholder = "") {
+export function inputElement(parent, type = "", value, css = "", placeholder = "", step = "") {
     const input = document.createElement("input");
     if (type)
         input.type = type;
@@ -16,6 +16,8 @@ export function inputElement(parent, type = "", value, css = "", placeholder = "
         input.className = css;
     if (placeholder)
         input.placeholder = placeholder;
+    if (step)
+        input.step = step;
     parent.appendChild(input);
     return input;
 }

@@ -87,8 +87,7 @@ class Row {
             if (e.code === "Space" || e.code === "Enter")
                 this.updateType(RowType.out);
         });
-        const amount = Elements.inputElement(this.root, "number", rowData.amount.toString(), "amount");
-        amount.placeholder = "0";
+        const amount = Elements.inputElement(this.root, "number", rowData.amount.toString(), "amount", "0", ".01");
         amount.addEventListener("change", e => this.updateAmount(amount.value));
         const rmBtn = Elements.divElement(this.root, "removeBtn");
         Elements.imageElement(rmBtn, "media/remove.svg", "removeImg", "x", "Remove");
